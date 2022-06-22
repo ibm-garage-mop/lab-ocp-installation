@@ -1,4 +1,4 @@
-# Parameters in the .tfvars file
+# Parameters of the .tfvars file
 
 This is a limited documentation of the `.tfvar` file. You can find a complete descrition of the tfvar parameters at [The PowerVM upi github repo](https://github.com/ocp-power-automation/ocp4-upi-powervm/blob/master/docs/var.tfvars-doc.md).
 
