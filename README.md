@@ -6,7 +6,7 @@ you will be performing the scripted installation that will :
  - Perform the openshift deployment ( 3 masters + 3 workers )
  - Connect to the openshift console 
 
-As a take away you will get the git repository to perform the same exercise at home. 
+As a take away you will get the git repository to perform the same exercise at home.  
 I hope you will enjoy !
 
 ---
