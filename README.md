@@ -9,5 +9,6 @@ you will be performing the scripted installation that will :
 As a take away you will get the git repository to perform the same exercise at home. 
 I hope you will enjoy !
 
+---
 [video](https://ibm.box.com/s/rvk8dojqr84ksa6ofrzauarfxqmynk5j)   
 [start lab](install-with-powervc.md)  
