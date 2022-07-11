@@ -135,7 +135,7 @@ The terraform script starts creating the VMs as specified in the demo.tfvars fil
 ## 2) Monitoring the installation
 
 The terraform script first builds the bastion an will try to ssh in order to ssh
-it to continue with the installation. It may take around 5 minutes to get the bastion ready :
+it to continue with the installation. It may take around 5 to 10 minutes to get the bastion ready :
 
 ```text
 module.bastion.null_resource.bastion_init[0]: Still creating... [4m0s elapsed]
