@@ -366,38 +366,6 @@ The Openshift cluster's console shows up like:
 
 ![image](images/ocp-console.png)
 
-## 4) Extra final step, remove the bootstrap node
-
-### a) Edit the tfvar file
-
-Edit the tfvar file and change the bootstrap count from `1` to `0` :
-
-```text
-bootstrap = {instance_type = "master", image_id = "8d20f462-260f-4715-9b95-6a63aad698e3", "count" = 0, fixed_ips = ["10.3.48.19"]}
-```
-
-### b) Re-run the terraform script
-
-```sh
-terraform apply -var-file paris.tfvars
-```
-
-Answer 'yes' when prompted
-
-It is possible that you receive the following error message after the bootstrap node is deleted. This is because of the limitations for the
-user in this demon environment. Nevertheless, it's ok :
-
-```text
-Error: Error updating OpenStack Neutron Port: Request forbidden: [PUT https://10.3.47.1:9696/v2.0/ports/3f5ce906-02b9-4c23-8d8d-e78d9eb4f5dd], error message: {"NeutronError": {"type": "PolicyNotAuthorized", "message": "(rule:update_port and rule:update_port:binding:host_id) is disallowed by policy", "detail": ""}}
-
-  on modules/2_network/network.tf line 48, in resource "openstack_networking_port_v2" "bastion_port":
-  48: resource "openstack_networking_port_v2" "bastion_port" {
-
-```
-
-After the bootstrap node gets properly removed, the [ha_proxy](<http://haproxy.paris.edu.ihost.com:9007>) will show the following :
-![ha_proxy with no bootstrap](images/no-bootstrap.png)
-
 You've completed the demo lab !
 
 > You can find a complete documentation of the Terraform deployment at the [ocp4-upi-powervm
