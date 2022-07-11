@@ -267,7 +267,7 @@ cd ~/openstack-upi/
 openshift-install wait-for install-complete --log-level debug
 ```
 
-* Check nodes and cluster operators progress from the bastion :
+* Check nodes and cluster operators progress from the second window on the bastion :
 
 ```sh
 cd ~
