@@ -147,7 +147,7 @@ vi paris.tfvars
 You can now start the terraform deployment :
 
 ```sh
-terraform apply -var-file paris.tfvars
+./terraform apply -var-file paris.tfvars
 ```
 
 
