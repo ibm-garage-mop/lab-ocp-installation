@@ -59,6 +59,11 @@ We now have to work in the `ocp4-upi-powervm` directory :
 cd ocp4-upi-powervm
 ```
 
+Install the required Terraform tool and plugins
+```
+/home/radar/get_terraform.sh
+```
+
 Copy the customized `.tfvar` sample :
 
 ```sh
