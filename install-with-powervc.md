@@ -60,8 +60,38 @@ cd ocp4-upi-powervm
 ```
 
 Install the required Terraform tool and plugins
-```
+```sh
 /home/radar/get_terraform.sh
+```
+Output look like :
+```text
+╷
+│ Warning: Incomplete lock file information for providers
+│
+│ Due to your customized provider installation methods, Terraform was forced to calculate lock file checksums locally for the
+│ following providers:
+│   - community-terraform-providers/ignition
+│   - hashicorp/null
+│   - hashicorp/random
+│   - terraform-provider-openstack/openstack
+│
+│ The current .terraform.lock.hcl file only includes checksums for linux_ppc64le, so Terraform running on another platform will fail
+│ to install these providers.
+│
+│ To calculate additional checksums for another platform, run:
+│   terraform providers lock -platform=linux_amd64
+│ (where linux_amd64 is the platform to generate)
+╵
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
 ```
 
 Copy the customized `.tfvar` sample :
@@ -70,11 +100,7 @@ Copy the customized `.tfvar` sample :
 cp /home/samples/sample_demo.tfvars ~/ocp4-upi-powervm/paris.tfvars
 ```
 
-Initialize the terraform plugins and modules for you environment :
 
-```sh
-terraform init -plugin-dir /usr/local/terraform/
-```
 
 Both the Openshift pull-secret and the ssh key-pair have to be copied in the `ocp4-upi-powervm/data` directory.
 
