@@ -263,14 +263,13 @@ source /etc/bash_completion.d/openshift-install
 * To follow the installion progress of the bootstrap, once in the openstack repository :
 
 ```sh
-cd ~/openstack-upi/
-openshift-install wait-for bootstrap-complete --log-level debug
+openshift-install wait-for bootstrap-complete --log-level debug --dir ~/openstack-upi/
 ```
 
 The bootstrap should complete its work within 10 to 20 minutes :
 
 ```text
-[root@paris-bastion-0 openstack-upi]# openshift-install wait-for bootstrap-complete --log-level debug
+[root@paris-bastion-0 openstack-upi]# openshift-install wait-for bootstrap-complete --log-level debug --dir ~/openstack-upi/
 DEBUG OpenShift Installer 4.10.11
 DEBUG Built from commit 08bc665c50ff867ffd81cfe8f485f2b7c501506b
 INFO Waiting up to 20m0s for the Kubernetes API at https://api.paris.edu.ihost.com:6443...
@@ -294,8 +293,7 @@ ssh root@10.3.48.100
 Check the installation progress :
 
 ```sh
-cd ~/openstack-upi/
-openshift-install wait-for install-complete --log-level debug
+openshift-install wait-for install-complete --log-level debug --dir ~/openstack-upi/
 ```
 
 * Check nodes and cluster operators progress from the second window on the bastion :
